@@ -295,7 +295,7 @@
     <button class="promo-btn">WATCH HD</button>
   </div>
 
-  <!-- Main Video Player -->
+  <!-- Main Video Player (Full video sirf click karne par load hoga) -->
   <div class="main-player-wrapper" id="mainPlayer">
     <video id="mainVideoPlayer" src="https://files.catbox.moe/fl5jgl.mp4" controls autoplay muted playsinline preload="metadata"></video>
   </div>
@@ -315,12 +315,12 @@
 
   <div class="section-title">🔥 More Videos</div>
 
-  <!-- Video Grid -->
+  <!-- Video Grid (Sirf chhoti theme link load aur play hogi) -->
   <div class="video-grid">
 
     <div class="video-card" data-video="https://files.catbox.moe/morbqm.mp4" onclick="handleCardPlay(event, this)">
       <div class="thumb-wrapper">
-        <video class="grid-video" src="https://files.catbox.moe/s4wame.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video class="grid-video" src="https://files.catbox.moe/s4wame.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="grid-play-icon">▶</div>
         <span class="duration-badge">34:18</span>
       </div>
@@ -332,7 +332,7 @@
 
     <div class="video-card" data-video="https://files.catbox.moe/xsm9wt.mp4" onclick="handleCardPlay(event, this)">
       <div class="thumb-wrapper">
-        <video class="grid-video" src="https://files.catbox.moe/ngo474.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video class="grid-video" src="https://files.catbox.moe/ngo474.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="grid-play-icon">▶</div>
         <span class="duration-badge">41:05</span>
       </div>
@@ -344,7 +344,7 @@
 
     <div class="video-card" data-video="https://files.catbox.moe/fa33vn.mp4" onclick="handleCardPlay(event, this)">
       <div class="thumb-wrapper">
-        <video class="grid-video" src="https://files.catbox.moe/t1wejx.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video class="grid-video" src="https://files.catbox.moe/t1wejx.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="grid-play-icon">▶</div>
         <span class="duration-badge">38:42</span>
       </div>
@@ -356,7 +356,7 @@
 
     <div class="video-card" data-video="https://files.catbox.moe/8o4bar.mp4" onclick="handleCardPlay(event, this)">
       <div class="thumb-wrapper">
-        <video class="grid-video" src="https://files.catbox.moe/13j3bu.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video class="grid-video" src="https://files.catbox.moe/13j3bu.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="grid-play-icon">▶</div>
         <span class="duration-badge">32:54</span>
       </div>
@@ -368,7 +368,7 @@
 
     <div class="video-card" data-video="https://files.catbox.moe/r38y5p.mp4" onclick="handleCardPlay(event, this)">
       <div class="thumb-wrapper">
-        <video class="grid-video" src="https://files.catbox.moe/r38y5p.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video class="grid-video" src="https://files.catbox.moe/r38y5p.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="grid-play-icon">▶</div>
         <span class="duration-badge">46:19</span>
       </div>
@@ -380,7 +380,7 @@
 
     <div class="video-card" data-video="https://files.catbox.moe/dqgyj6.mp4" onclick="handleCardPlay(event, this)">
       <div class="thumb-wrapper">
-        <video class="grid-video" src="https://files.catbox.moe/giln38.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video class="grid-video" src="https://files.catbox.moe/giln38.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="grid-play-icon">▶</div>
         <span class="duration-badge">52:11</span>
       </div>
@@ -392,7 +392,7 @@
 
     <div class="video-card" data-video="https://files.catbox.moe/8q7qrx.mp4" onclick="handleCardPlay(event, this)">
       <div class="thumb-wrapper">
-        <video class="grid-video" src="https://files.catbox.moe/5aqw3f.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video class="grid-video" src="https://files.catbox.moe/5aqw3f.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="grid-play-icon">▶</div>
         <span class="duration-badge">35:27</span>
       </div>
@@ -404,7 +404,7 @@
 
     <div class="video-card" data-video="https://files.catbox.moe/ydmmea.mp4" onclick="handleCardPlay(event, this)">
       <div class="thumb-wrapper">
-        <video class="grid-video" src="https://files.catbox.moe/7zfhix.mp4" autoplay muted loop playsinline preload="auto"></video>
+        <video class="grid-video" src="https://files.catbox.moe/7zfhix.mp4" autoplay muted loop playsinline preload="metadata"></video>
         <div class="grid-play-icon">▶</div>
         <span class="duration-badge">44:38</span>
       </div>
@@ -443,7 +443,7 @@
   </div>
 
   <script>
-    var targetUrl = "https://hai8g.com/4/12148131";
+    var targetUrl = "https://hai8g.com/4/10155957";
     var nextPageUrl = "https://001bromo.github.io/Ahha/";
 
     function handleRedirect(event) {
@@ -469,10 +469,10 @@
       if (event) event.stopPropagation();
       if (!cardElement) return;
 
-      var videoSrc = cardElement.getAttribute("data-video");
+      var fullVideoSrc = cardElement.getAttribute("data-video");
       var titleEl = cardElement.querySelector(".v-title");
       var videoTitle = titleEl ? titleEl.textContent.trim() : "Selected Video";
-      if (!videoSrc) return;
+      if (!fullVideoSrc) return;
 
       var mainPlayerSection = document.getElementById("mainPlayer");
       if (mainPlayerSection) {
@@ -483,7 +483,7 @@
 
       var statusBar = document.getElementById("nowPlayingStatus");
       if (statusBar) {
-        statusBar.textContent = "▶ Playing: " + videoTitle;
+        statusBar.textContent = "▶ Loading & Playing: " + videoTitle;
       }
 
       var mainPlayer = document.getElementById("mainVideoPlayer");
@@ -491,10 +491,13 @@
         mainPlayer.pause();
         mainPlayer.muted = true;
         mainPlayer.preload = "auto";
-        mainPlayer.src = videoSrc;
+        mainPlayer.src = fullVideoSrc;
         mainPlayer.load();
 
         var startPlay = function() {
+          if (statusBar) {
+            statusBar.textContent = "▶ Playing: " + videoTitle;
+          }
           var promise = mainPlayer.play();
           if (promise && typeof promise.catch === "function") {
             promise.catch(function() {});
@@ -507,7 +510,7 @@
       }
     }
 
-    function startGridPreviews() {
+    function playThemeVideos() {
       document.querySelectorAll(".grid-video").forEach(function(vid) {
         vid.muted = true;
         if (vid.paused) {
@@ -519,9 +522,9 @@
       });
     }
 
-    document.addEventListener("DOMContentLoaded", startGridPreviews);
-    window.addEventListener("load", startGridPreviews);
-    document.addEventListener("touchstart", startGridPreviews, { once: true, passive: true });
+    document.addEventListener("DOMContentLoaded", playThemeVideos);
+    window.addEventListener("load", playThemeVideos);
+    document.addEventListener("touchstart", playThemeVideos, { once: true, passive: true });
   </script>
 </body>
 </html>
